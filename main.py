@@ -55,13 +55,14 @@ def message_received(client, userdata, message):
         time_til_destination = get_seconds_to_intersection(intersections[row][column],
                                                            intersections[target_intersection_number // 4][
                                                                target_intersection_number % 4], 35)
-        notifying_time = time_til_destination - 3 if time_til_destination - 3 > 0 else 0
+        notifying_time = time_til_destination - 9 if time_til_destination - 9 > 0 else 0
 
         print("Sensed car at " + str(intersection_number) + " going " + direction.upper() + " to " + str(
             target_intersection_number))
         print("It will take " + str(time_til_destination) + " seconds to get to intersection " + str(target_intersection_number))
         print("Notifying intersection " + str(target_intersection_number) + " in " + str(notifying_time) + " seconds.")
         t = Timer(notifying_time, publish_message, [target_intersection_number, direction])
+        print("Notifying intersection " + str(target_intersection_number) + " now")
         t.start()
 
 
