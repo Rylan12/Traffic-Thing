@@ -66,7 +66,11 @@ def message_received(client, userdata, message):
 
 
 def publish_message(intersection, direction):
-    c.publish('traffic/light/' + str(intersection) + '/' + str(direction) + '/state', 'green', qos=2, retain=True)
+    if direction == 'e' or direction == 'w':
+        direction = 'ew'
+    else:
+        direction = 'ns'
+    c.publish('traffic/light/' + str(intersection) + '/state', str(direction), qos=2, retain=True)
 
 
 if __name__ == '__main__':
