@@ -6,10 +6,9 @@
 
 class Light:
 
-    def __init__(self, direction, state, ID):
+    def __init__(self, direction, state):
         self.direction = direction
         self.state = state
-        self.ID = ID
 
     def changeState(st8):
         state = st8
