@@ -66,7 +66,7 @@ def message_received(client, userdata, message):
 
 
 def publish_message(intersection, direction):
-    c.publish('traffic/light/' + str(intersection) + '/' + str(direction) + '/state', 'green', qos=2)
+    c.publish('traffic/light/' + str(intersection) + '/' + str(direction) + '/state', 'green', qos=2, retain=True)
 
 
 if __name__ == '__main__':
