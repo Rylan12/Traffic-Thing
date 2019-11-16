@@ -5,10 +5,10 @@ from traffic import *
 c = MQTT.Client()
 
 intersections = [
-    [Intersection(0, 0, 4, 0), Intersection(380, 0, 4, 1), Intersection(1143, 0, 4, 2), Intersection(1747, 0, 4, 3)],
-    [Intersection(0, 340, 4, 4), Intersection(380, 340, 4, 5), Intersection(1143, 340, 4, 6), Intersection(1747, 340, 4, 7)],
-    [Intersection(0, 688, 4, 8), Intersection(380, 688, 4, 9), Intersection(1143, 688, 4, 10), Intersection(1747, 688, 4, 11)],
-    [Intersection(0, 1099, 4, 12), Intersection(380, 1099, 4, 13), Intersection(1143, 1099, 4, 14), Intersection(1747, 1099, 4, 15)]
+    [Intersection(0, 0, 4, 0), Intersection(766, 0, 4, 1), Intersection(1388, 0, 4, 2), Intersection(1766, 0, 4, 3)],
+    [Intersection(0, 340, 4, 4), Intersection(766, 340, 4, 5), Intersection(1388, 340, 4, 6), Intersection(1766, 340, 4, 7)],
+    [Intersection(0, 688, 4, 8), Intersection(766, 688, 4, 9), Intersection(1388, 688, 4, 10), Intersection(1766, 688, 4, 11)],
+    [Intersection(0, 1099, 4, 12), Intersection(766, 1099, 4, 13), Intersection(1388, 1099, 4, 14), Intersection(1766, 1099, 4, 15)]
 ]
 
 
