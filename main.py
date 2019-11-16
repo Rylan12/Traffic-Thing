@@ -66,14 +66,14 @@ def message_received(client, userdata, message):
 
 
 def publish_message(intersection, direction):
-    c.publish('traffic/light/' + str(intersection) + '/' + str(direction) + '/state', 'green')
+    c.publish('traffic/light/' + str(intersection) + '/' + str(direction) + '/state', 'green', qos=2)
 
 
 if __name__ == '__main__':
     c.connect('localhost', port=1883, keepalive=60)
     c.loop_start()
     c.on_message = message_received
-    c.subscribe('traffic/#')
+    c.subscribe('traffic/#', qos=2)
     while True:
         pass
     # message_received("", "", "traffic/light/0/e/sensed")
