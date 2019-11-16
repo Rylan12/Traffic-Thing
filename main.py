@@ -78,6 +78,9 @@ if __name__ == '__main__':
     c.loop_start()
     c.on_message = message_received
     c.subscribe('traffic/#', qos=2)
+    for row in range(len(intersections)):
+        for column in range(len(intersections[row])):
+            publish_message(row * 4 + column, 'n')
     while True:
         pass
     # message_received("", "", "traffic/light/0/e/sensed")
