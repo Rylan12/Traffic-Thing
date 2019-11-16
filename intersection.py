@@ -1,6 +1,6 @@
 import os
 from time import sleep
-
+import led
 import paho.mqtt.client as MQTT
 
 c = MQTT.Client()
@@ -12,10 +12,12 @@ def message_received(client, userdata, message):
         print('Message Received: ' + payload)
         if payload == 'ns':
             print('Switching N/S to green and E/W to red')
-            os.system('/opt/vc/bin/vcmailbox 0x00038041 8 8 130 1 >/dev/null')
+            led.control('green', 'on')
+            led.control('red', 'off')
         elif payload == 'ew':
             print('Switching E/W to green and N/S to red')
-            os.system('/opt/vc/bin/vcmailbox 0x00038041 8 8 130 0 >/dev/null')
+            led.control('red', 'on')
+            led.control('green', 'off')
     elif 'sensor' in message.topic:
         publish_message(message.payload.decode('UTF-8'))
 
