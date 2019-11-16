@@ -70,7 +70,7 @@ def publish_message(intersection, direction):
 
 
 if __name__ == '__main__':
-    c.connect('localhost', port=1883, keepalive=60)
+    c.connect('localhost', port=50001, keepalive=60)
     c.loop_start()
     c.on_message = message_received
     c.subscribe('traffic/#', qos=2)
