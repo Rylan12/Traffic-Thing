@@ -4,14 +4,14 @@
 # Outputs: When and what traffic light to turn off
 
 
-class Light:
-
-    def __init__(self, direction, state):
-        self.direction = direction
-        self.state = state
-
-    def changeState(st8):
-        state = st8
+# class Light:
+#
+#     def __init__(self, direction, state):
+#         self.direction = direction
+#         self.state = state
+#
+#     def changeState(st8):
+#         state = st8
 
 
 class Intersection:
