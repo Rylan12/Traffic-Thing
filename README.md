@@ -1,3 +1,3 @@
 # Traffic-Thing
 
-Sample description
+Traffic light management system made during a hackathon
