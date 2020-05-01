@@ -1,3 +1,5 @@
 # Traffic-Thing
 
-Traffic light management system made during a hackathon
+MQTT based traffic light management system made during a hackathon
+
+See `requirements.txt` for requirements
